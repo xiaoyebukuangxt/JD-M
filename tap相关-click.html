@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+            
+        }
+        .small{
+            width: 100px;
+            height: 100px;
+            background-color: #0f0;
+        }
+    </style>
+
+</head>
+<body>
+<div class="box">
+    <div class="small"></div>
+</div>
+
+<script>
+   var box=document.getElementsByClassName('box')[0];
+    var small=document.getElementsByClassName('small')[0];
+
+   var startTime=0
+   var endTime=0
+    small.addEventListener('touchstart',function(){
+        startTime=Date.now()
+        console.log(startTime);
+    })
+     small.addEventListener('touchmove',function(){
+
+    })
+     small.addEventListener('touchend',function(){
+        endTime=Date.now()
+         console.log(endTime);
+         console.log(endTime - startTime);
+     })
+    small.addEventListener('click',function(){
+        console.log('mmm');
+    })
+    small.onclick=function(){
+        console.log('nnn');
+    }
+
+
+</script>
+</body>
+</html>
